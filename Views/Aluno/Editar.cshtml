@@ -1,0 +1,34 @@
+﻿@{
+    var aluno = ViewBag.alunoRetornado;
+}
+
+<h1>Página de Cadastro de Aluno</h1>
+
+<form action='@Url.Action("Atualizar")'method="post" enctype="multipart/form-data">
+    <div class="form-aluno-id">
+        <label for="id">ID:</label>
+        <input type="text" name="alunoId" id="id" value="@aluno.Id" />
+    </div>
+    <div>
+        <label for="nome">Nome:</label>
+        <input type="text" name="alunoNome" placeholder="Ex. Laura Lima" id="nome" value="@aluno.Nome"/>
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="text" name="alunoEmail" placeholder="Ex. laura.26@gmail.com" id="email" value="@aluno.Email"/>
+    </div>
+    <div>
+        <label for="end">Endereço:</label>
+        <input type="text" name="alunoEnd" placeholder="Ex. Rua Barão de Limeira 94" id="end" value="@aluno.Endereco" />
+    </div>
+    <div>
+        <label for="tel">Telefone:</label>
+        <input type="text" name="alunoTel" placeholder="Ex. 11-99989-2554" id="tel" value="@aluno.Telefone" />
+    </div>
+    <div>
+        <label for="esc">Escolaridade:</label>
+        <input type="text" name="alunoEsc" placeholder="Ex. 1° Ano do Ensino Médio" id="esc" value="@aluno.Escolaridade" />
+    </div>
+    <button type="submit">Atualizar</button>
+
+</form>

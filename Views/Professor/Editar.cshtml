@@ -1,0 +1,34 @@
+﻿@{
+    var professor = ViewBag.professorRetornado;
+}
+
+<h1>Página de Cadastro de Professor </h1>
+
+<form action='@Url.Action("Atualizar")' method="post" enctype="multipart/form-data">
+    <div class="form-professor-id">
+        <label for="id">ID:</label>
+        <input type="text" name="professorId" id="id" value="@professor.Id" />
+    </div>
+    <div>
+        <label for="nome">Nome:</label>
+        <input type="text" name="professorNome" placeholder="Ex. Laura Lima" id="nome" value="@professor.Nome" />
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="text" name="professorEmail" placeholder="Ex. laura.26@gmail.com" id="email" value="@professor.Email" />
+    </div>
+    <div>
+        <label for="end">Endereço:</label>
+        <input type="text" name="professorEnd" placeholder="Ex. Rua Barão de Limeira 94" id="end" value="@professor.Endereco" />
+    </div>
+    <div>
+        <label for="tel">Telefone:</label>
+        <input type="text" name="professorTel" placeholder="Ex. 11-99989-2554" id="tel" value="@professor.Telefone" />
+    </div>
+    <div>
+        <label for="esc">Escolaridade:</label>
+        <input type="text" name="professorCargo" placeholder="Ex. 1° Ano do Ensino Médio" id="cargo" value="@professor.Cargo" />
+    </div>
+    <button type="submit">Atualizar</button>
+
+</form>
